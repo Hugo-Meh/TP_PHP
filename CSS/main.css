@@ -1,0 +1,14 @@
+#wrapper{
+    width: 80%;
+}
+.article{
+    display: block;
+    text-align: center;
+    margin: 2%;
+    width: 29%;
+}
+.article > img{
+    width: 300px;
+    heigth: 400px;
+}
+

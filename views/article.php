@@ -2,8 +2,9 @@
 ?>
 <div class="article">
     <h2><?=$nomArticle?></h2>
-    <img src=<?=$img_article?> alt="<?=$alt_article?>$">
-    <pLorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+    <img src="<?=$img_article?>"  alt="<?=$alt_article?>">
+    <p>Ecrit par <?=$nomAuteur?></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
             gravida id purus sed tempor. Morbi sagittis, quam eget
             lacinia sodales, lorem mauris auctor diam, vel semper dolor
             sapien id nisl. Etiam nec turpis nec tortor pretium consectetur
@@ -17,3 +18,4 @@
             maximus, diam quam efficitur lectus, ac sagittis augue augue sit amet elit.
             Aliquam condimentum hendrerit mauris, non mollis augue.</p>
 </div>
+
