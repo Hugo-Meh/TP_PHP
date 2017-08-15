@@ -2,7 +2,7 @@
 
 ?>
 <header>
-    <?php require_once ('views/connexion.php');
-    require_once ('views/menu.php'); ?>
+    <?php require_once ('connexion.php');
+    require_once ('menu.php'); ?>
     <p>haut de la page <?=$title?></p>
 </header>

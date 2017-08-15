@@ -3,8 +3,8 @@
 ?>
 <nav>
     <ul>
-        <li><a href="index.php">accueil</a></li>
-        <li><a href="article.php">Nos articles</a></li>
-        <li><a href="article_usager.php">Article usager</a></li>
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="catalogue.php">Catalogue</a></li>
+        <li><a href="inscription.php">Inscription</a></li>
     </ul>
 </nav>

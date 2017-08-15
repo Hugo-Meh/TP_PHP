@@ -1,0 +1,16 @@
+NEXT COMMIT
+-delete commit page not sure repot
+-delete /images
+-delete catalogue + rename article to catalogue
+
+
+corrigé :
+page views/articles.php contient l'affichages des articles
+pages articles.php devient page catalogue
+le formulaire des categorie devient un form POST avec bouton submit
+condition de validation pour eviter les variable indefini au lancement de la page
+changement des nom des liens dans menu.php
+
+Next COmmit
+terminer les condition de validation coté serveur dans la page d'inscription
+verification des donnees avant de les inserer dans BD

@@ -1,4 +1,6 @@
 <?php
+//unset($_POST);
+
 $title = "page1";
 require_once('views/page_top.php');
 echo "<main>";
@@ -11,7 +13,7 @@ catch (Exception $exception) {
     die('Erreur : ' . $exception->getMessage());
 }
 $categorie = mysqli_query($bdd, 'select nom_cat from categorie');
-echo '<form><ul class="ul_cat">';
+echo '<form method="POST" action=""><ul class="ul_cat">';
 //afficher les categorie enregistré dans la base
 // si on ajoute une categorie a la base serait dynamiquement ajouté dans la liste categorie
 while ($donnee = mysqli_fetch_assoc($categorie)) {
@@ -19,32 +21,28 @@ while ($donnee = mysqli_fetch_assoc($categorie)) {
     echo "<li class='li_cat'><input type='checkbox' name='{$nom_cat}'><label for='{$nom_cat}'>{$nom_cat}</label></li>";
 }
 echo '</ul>';
-echo '<button name="btn_cat" value="liste_cat">valider</button> ';
+echo '<input type="submit" name="btn_cat" value="valider"/>';
 echo '</form>';
-if ($_GET['btn_cat'] == 'liste_cat') {
+
+//traitement de l'afichage des livres des categories coché
+if(!empty($_POST)&&array_key_exists('btn_cat',$_POST))
+{
+if ($_POST['btn_cat'] == 'valider') {
     echo '<div id="container_listes">';
     // parcourir le tableau $_GET en cherchant les categories cochés
-    foreach ($_GET as $id => $value) {
+    foreach ($_POST as $id => $value) {
         if ($value == 'on') {
-            echo $id;
             $requete = 'select * from categorie C INNER JOIN articles A ON C.id_cat=A.id_cat WHERE C.nom_cat=\'' . $id . '\'';
             $bdd_liste = mysqli_query($bdd, $requete);
-
-            echo '<ul class="article">';
-            //affiche la liste des item pour chaque catgories  coché
-            while ($article = mysqli_fetch_assoc($bdd_liste)) {
-                echo "<li><img src='{$article['url_img']}' alt='{$article['alt_img']}'/></li>";
-                echo "<li><span class='titre_detail'>Nom  de l'article: </span><span>{$article['alt_img']}</span></li> ";
-                echo "<li><span class='titre_detail'>Description: </span><span>{$article['description']}</span></li> ";
-                echo "<li><span class='titre_detail'>Prix: </span><span>{$article['prix']} CAD</span></li> ";
-            }
-            echo '</ul>';
-
+            echo "<div class='list_cat'><p>$id</p>";
+            require 'views/article.php';
+            echo "</div>";
         }
     }
     echo '</div>';
-}
 
+}
+}
 echo "</main>";
 
 require_once('views/page_bottom.php');
