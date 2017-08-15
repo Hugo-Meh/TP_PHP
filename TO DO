@@ -14,3 +14,6 @@ changement des nom des liens dans menu.php
 Next COmmit
 terminer les condition de validation coté serveur dans la page d'inscription
 verification des donnees avant de les inserer dans BD
+
+NEXT commit
+corrigé les condition de validation page inscription et verification de l'existance de l'email dans la table utilisateur
