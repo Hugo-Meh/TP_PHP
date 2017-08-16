@@ -6,7 +6,7 @@
 <head>
   <meta charset="UTF-8">
   <title><?=$title?></title>
-  <link href="../CSS/main.css">
+  <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
 <?php

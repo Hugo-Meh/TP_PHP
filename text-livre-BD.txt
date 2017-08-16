@@ -1,0 +1,235 @@
+tritre : 1984
+auteur : George Orwell
+categorie : Fiction + Uthopie
+description:
+Roman essentiel de science-fiction, «1984» touche à la surveillance façon «Big Brother», 
+mais aussi à la délation, à la propagande et à l’étouffement de tout sens critique. En bref, 
+tout ce qui est, encore aujourd'hui, utilisé pour la mise en place d’une pensée unique. 
+Moderne et troublant.
+
+titre : Antigone
+auteur: Anouhil
+catégorie : Theatre + Tragédie Grecque
+description: 
+Antigone d’Anouilh est inspirée par le mythe antique, 
+rompant avec la tradition de la tragédie grecque. ‘L’Antigone de Sophocle, lu et relu, et 
+je connaissais par cœur a toujours été un choc soudain pour moi pendant la guerre, les jours de petits panneaux rouges. 
+J’ai réécrit mon chemin, avec la résonance de la tragédie nous étions alors éprouver. ‘
+
+titre : Bel-Ami
+auteur : Guy de Maupassant
+categorie : Roman réaliste + Littérature Française
+description :Georges Duroy, surnommé Bel-Ami, doit son ascension sociale aux femmes qui succombent à son 
+charme irrésistible. Une peinture féroce du milieu journalistique parisien du XIXe siècle, accompagnée de 
+repères historiques et littéraires ainsi que de documents permettant de mieux comprendre l'oeuvre.
+
+titre : Candide ou l'optimisme
+auteur : Voltaire 
+categorie : contes philosophique + Littérature Française 
+description : 
+Que signifie ce nom «Candide» : innocence de celui qui ne connait pas le mal ou illusion du naïf qui n'a pas fait 
+l'expérience du monde ? Voltaire joue en 1759, après le tremblement de terre de Lisbonne, sur ce double sens. 
+Il nous fait partager les épreuves fictives d'un jeune homme simple, confronté aux leurres de l'optimisme, 
+mais qui n'entend pas désespérer et qui en vient à une sagesse finale, mesurée et mystérieuse.
+
+titre : Fables
+auteur : Jean de La Fontaine
+categorie : Fable + Littérature Française
+description :
+Découvrez dans ces deux livres en papiers découpés seize fables 
+de Jean de La Fontaine mises en scène avec finesse et malice. 
+À la manière d'une pièce de théâtre du XVIIe siècle, chaque animal joue son rôle 
+afin de restituer l'atmosphère et l'esprit uniques de ces fables.
+
+titre : Hamlet 
+auteur : William Shakespear
+categorie : Theatre + Tragédie
+description : 
+Hamlet 
+
+Mort à peine depuis deux mois, non, pas autant, pas deux, 
+
+Un si excellent roi, qui était à celui-ci 
+
+Ce qu'Hypérion est à un satyre, si tendre pour ma mère 
+
+Qu'il ne permettait pas aux vents du ciel 
+
+De toucher trop rudement son visage. Ciel et terre, 
+
+Est-ce à moi de m'en souvenir ? Oh ! Elle se pendait à lui 
+
+Comme si son appétit de lui croissait 
+
+De s'en repaître, et pourtant en un mois, 
+
+N'y pensons plus : fragilité, ton nom est femme. 
+
+Un petit mois, les souliers n'étaient pas même usés 
+
+Avec lesquels elle suivait le corps de mon pauvre père, 
+
+Comme Niobé, tout en larmes, elle, oui, elle - 
+
+Ô Dieu, une bête à qui manque la faculté de raison 
+
+Aurait pleuré plus longtemps ! - se mariait à mon oncle, 
+
+Le frère de mon père, mais qui ne ressemble pas plus à mon père 
+
+Que moi à Hercule...
+
+titre : Harry Potter tome 5 : L'ordre du phoenix
+auteur : Joanne Kathleen Rowling
+categorie : Fantastique + Aventure
+description : 
+À quinze ans, Harry entre en cinquième année à Poudlard, mais il n'a jamais été si anxieux. 
+L'adolescence, la perspective des examens et ces étranges cauchemars... Car Celui-Dont-On-Ne-Doit-Pas-Prononcer-Le-Nom est de retour.
+ Le ministère de la Magie semble ne pas prendre cette menace au sérieux, contrairement à Dumbledore. 
+La résistance s'organise alors autour de Harry qui va devoir compter sur le courage et la fidélité de ses amis de toujours... 
+
+D'une inventivité et d'une virtuosité rares, découvrez le cinquième tome de cette saga que son auteur a su hisser au rang de 
+véritable phénomène littéraire.
+
+titre : Histoire extraordinaire
+auteur : Allan Edgar Poe
+catégorie : receuil de nouvelle
+description :
+L'homme est lui-même et ce qu'il cache. Ce secret hanta Edgar Poe. Le descendant de la maison Usher qui croit sa soeur morte, l'assassin du 
+chat noir et William Wilson sont victimes de leur double, le cousin de Bérénice l'est de sa névrose obsessionnelle, le peintre du portrait ovale, de son art.
+     Dans ces nouvelles fantastiques, prolongement des Histoires extraordinaires, les cadavres se promènent, un sourire ironique aux lèvres, les femmes sont « belles comme un rêve de pierre », 
+et la mort clôt chaque récit. L'envoûtement est total, l'horreur atteint son point culminant et pourtant la réalité est là, 
+tangible, pour chasser l'irrationnel. Fasciné par cette oeuvre américaine, Baudelaire l'a traduite admirablement et rendue 
+célèbre dans le monde entier.
+
+titre :The Hunger Games
+auteur : Suzanne Collins
+categorie : Aventure + Fiction
+description :
+Dans un futur sombre, sur les ruines des États-Unis, un jeu télévisé est créé pour contrôler le peuple par la terreur.
+Douze garçons et douze filles tirés au sort participent à cette sinistre téléréalité, que tout le monde est forcé de regarder en direct.
+Une seule règle dans l'arène : survivre, à tout prix.
+
+Quand sa petite soeur est appelée pour participer aux Hunger Games, Katniss n'hésite pas une seconde. Elle prend sa place, consciente du danger.
+À seize ans, Katniss a déjà été confrontée plusieurs fois à la mort. Chez elle, survivre est comme une seconde nature...
+
+titre : L'art de la guerre
+auteur : Sun Tzu
+catégorie : Fiction + Traité millitaire
+description :
+Au cours de l'histoire, nombreuses sont les guerres qui changèrent le paysage politique et culturel du monde. 
+Source de bouleversements, de destructions et de violences, elles contribuèrent néanmoins à l'évolution de la 
+création artistique. En effet, malgré les événements traumatisants qu'elles engendrent, les guerres inspirent les 
+artistes depuis toujours. Ces derniers immortalisent ces moments dramatiques en des ouvres qui sont autant de précieux 
+témoignages pour toutes les générations. Ce livre offre au lecteur les illustrations des batailles les plus connues et 
+autres scènes de guerre.
+
+titre : Le petit prince
+auteur : Antoine de Saint-Exupéry
+catégorie : Fable
+description :
+J'ai ainsi vécu seul, sans personne avec qui parler véritablement, jusqu'à une panne dans le désert du Sahara, il y a six ans. 
+Quelque chose s'était cassé dans mon moteur. Et comme je n'avais avec moi ni mécanicien, ni passagers, je me préparai à essayer 
+de réussir, tout seul, une réparation difficile. C'était pour moi une question de vie ou de mort. J'avais à peine de l'eau à 
+boire pour huit jours. Le premier soir je me suis donc endormi sur le sable à mille milles de toute terre habitée. 
+J'étais bien plus isolé qu'un naufragé sur un radeau au milieu de l'océan. Alors vous imaginez ma surprise, au lever du jour, 
+quand une drôle de petite voix m'a réveillé. Elle disait : ... " S'il vous plaît... dessine-moi un mouton ! "
+
+
+titre : Le seigneur des anneaux
+auteur : John Ronald Reuel Tolkien
+catégorie : Fantastique + Aventure
+description :
+THE LORD OF THE RING est un livre fort curieux, à l'époque du Nouveau Roman et du délire technicitaire chez les romanciers. 
+L'auteur a, de toute évidence, voulu ressusciter le récit d'aventures fabuleuses, proche du conte de fées dans la mesure où 
+le merveilleux y joue un grand rôle, proche aussi des chroniques imaginaires (voyages, utopies, etc) 
+qui ont fleuri en Angleterre aux XVe et XVIe siècles. 
+
+titre : Les fleurs du mal
+auteur : Charles Baudelaire
+catégorie : Poésie
+description :
+Avec Les Fleurs du Mal commence la poésie moderne : le lyrisme subjectif s'efface devant cette « impersonnalité volontaire »
+ que Baudelaire a lui-même postulée ; la nature et ses retours cycliques cèdent la place au décor urbain et à ses changements 
+marqués par l'Histoire, et il arrive que le poète accède au beau par l'expérience de la laideur. Quant au mal affiché dès le titre 
+du recueil, s'il nous apporte la preuve que l'art ici se dénoue de la morale, il n'en préserve pas moins la profonde 
+spiritualité des poèmes. 
+
+titre : Les Misérables
+auteur : Victor Hugo
+catégorie : Fiction + Historique
+description :
+« Je m'appelle Jean Valjean. Je suis un galérien. J'ai passé dix-neuf ans au bagne. Je suis libéré depuis 
+quatre jours et en route pour Pontarlier qui est ma destination. Quatre jours que je marche depuis Toulon. 
+Aujourd'hui j'ai fait douze lieues à pied. Ce soir en arrivant dans ce pays, j'ai été dans une auberge, on m'a renvoyé à cause 
+de mon passeport jaune que j'avais montré à la mairie. J'ai été à une autre auberge. On m'a dit : - Va-t'en ! Chez l'un, chez l'autre.
+Personne n'a voulu de moi. J'ai été à la prison, le guichetier ne m'a pas ouvert. J'ai été dans la niche d'un chien. 
+Ce chien m'a mordu et m'a chassé, comme s'il avait été un homme. On aurait dit qu'il savait qui j'étais
+
+titre : L'Odyssée
+auteur : Homère
+catégorie : épopée
+description :
+« Ô Muse, conte-moi l'aventure de l'inventif : celui qui pilla Troie, qui pendant des années erra, voyant beaucoup de villes, 
+découvrant beaucoup d'usages, souffrant beaucoup d'angoisse dans son âme sur la mer pour défendre sa vie et le retour de ses 
+marins sans en pouvoir sauver un seul, quoi qu'il en eût : par leur propre fureur ils lurent perdus en effet, 
+ces enfants qui touchèrent aux troupeaux du dieu d'En-Haut, le Soleil qui leur prit le bonheur du retour... 
+À nous aussi, Fille de Zeus, conte un peu ces exploits ! » 
+Ainsi s'ouvre le premier des vingt-quatre chants de L'Odyssée 
+
+titre : L'Iliade
+auteur : Homère
+catégorie : Poésie + épopée
+description :
+Depuis neuf ans, Grecs et Troyens luttent sous le regard des dieux, arbitres des destinées humaines. La beauté d'une femme et 
+les richesses d'une cité sont l'enjeu de la guerre. Mais le sort est fixé d'avance : Troie doit tomber aux mains des Achéens. 
+Cependant, voici qu'une terrible querelle éclate au sein de l'armée grecque entre le chef d'expédition Agamemnon et 
+le vaillant héros Achille : permettra-t-elle aux Troyens et à leurs alliés divins de retenir le cours inévitable de l'histoire 
+et de repousser encore le jour fatal de la défaite ?
+
+titre : Millenium. vol1 Les hommes qui n'aimait pas les femmes
+auteur : Stieg Larsson
+catégorie : Policier
+description :
+Après avoir perdu un procès en diffamation, Mikael Blomkvist, brillant journaliste d'investigation, démissionne 
+de la revue Millénium et ressasse son dépit. Il est contacté par un magnat de l'industrie qui lui confie une enquête vieille 
+de quarante ans : sur l'île abritant l'imposante propriété familiale, sa nièce, Harriet Vanger, a naguère disparu, et
+il reste persuadé qu'elle a été assassinée. Si ce n'est pas exactement le hasard qui réunit Mikael Blomkvist et
+Lisbeth Salander, réchappée des services sociaux et génie de l'informatique, c'est une vraie chance, 
+car la jeune femme va bien vite s'imposer comme le meilleur atout du journaliste pour élucider l'affaire. 
+
+titre : Moby Dick
+auteur : Herman Melville 
+catégorie : Aventure
+description :
+Moby Dick (1851), le chef-d'oeuvre de 
+Melville, est l'histoire d'une obsession : 
+depuis qu'un féroce cachalot a emporté 
+la jambe du capitaine Achab, celui-ci le 
+poursuit sans relâche de sa haine. Ismaël, 
+matelot embarqué à bord du baleinier 
+le Péquod, se trouve pris peu à peu dans 
+le tourbillon de cette folle vengeance : c'est 
+par sa voix que se fera entendre l'affrontement final de 
+l'homme et du grand Léviathan blanc. 
+
+titre : Mort sur le nil 
+auteur : Agatha Christie
+catégorie : Policier
+description :
+Ce n'est pas très joli de voler son fiancé à sa meilleure amie pour se marier 
+avec lui. Et même si l'amie en question semble se résigner, la ravissante et riche 
+Linnet Ridgeway a bien des raisons d'être inquiète... Surtout quand le hasard les
+rassemble, pour une croisière sur le Nil, avec d'inquiétants personnages, dans 
+une atmosphère lourde de sensualité et de cupidité. 
+Un petit revolver, un crime étrange, une énigme de plus à résoudre pour un 
+passager pas comme les autres : Hercule Poirot.
+
+titre : Starters
+auteur : Lissa Price
+catégorie : Science-Fiction
+description :
+Après les ravages d'un virus mortel, seules ont survécu les populations très jeunes ou très âgées
+ : les Starters et les Enders. Réduite à la misère, la jeune Callie tente de survivre dans la rue avec son petit frère.
+ Elle prend alors la décision de louer son corps à un mystérieux institut scientifique, la Banque des Corps. 
+C'est le premier volet d'un thriller d'anticipation qui vous plongera au coeur d'une société fascinée par les apparences.
