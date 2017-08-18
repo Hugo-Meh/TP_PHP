@@ -9,6 +9,15 @@
 }
 .article > img{
     width: 300px;
-    heigth: 400px;
+    height: 400px;
+}
+#menu > ul {
+    display: flex;
+    justify-content: flex-end;
+}
+#menu > ul > li{
+    height: 150px;
+    width: 20%;
+    background-color: cornflowerblue;
 }
 

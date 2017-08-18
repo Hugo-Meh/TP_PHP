@@ -6,7 +6,8 @@
 <head>
   <meta charset="UTF-8">
   <title><?=$title?></title>
-  <link href="../CSS/main.css">
+  <?php require_once ('')?>
+  <link href="CSS/main.css">
 </head>
 <body>
 <?php
