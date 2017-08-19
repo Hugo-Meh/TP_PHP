@@ -1,23 +1,130 @@
+li{
+    list-style: none;
+}
+.bouton_panier{
+    width: 40px;
+    height: 40px;
+}
 #wrapper{
+
     width: 80%;
+    margin: 0 auto;
 }
-.article{
-    display: block;
-    text-align: center;
-    margin: 2%;
-    width: 29%;
+/*css pour page catalogue*/
+#wrapper_cat form {
+    border: 1px solid black;
 }
-.article > img{
-    width: 300px;
-    height: 400px;
-}
-#menu > ul {
+#wrapper_cat #div_cat{
     display: flex;
-    justify-content: flex-end;
+    width: 80%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 3% auto;
+
 }
-#menu > ul > li{
-    height: 150px;
-    width: 20%;
-    background-color: cornflowerblue;
+#div_cat + input{
+    width:40%;
+    display: block;
+    margin: 2% auto;
+    font-size: 120%;
+}
+.div_cat_child{
+    width: 30%;
+    padding: 2% 0;
+    font-size: 120%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.div_cat_child input {
+    display: inline-block;
+    margin-right: 10%;
+
+}
+
+/*css pour page article*/
+
+#wrapper_articles{
+    border: 1px solid black;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin:3% auto;
+}
+#wrapper_articles .image{
+    width: 100%;
+    text-align: center;
+
+}
+.article {
+    width: 45%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    margin: 2%;
+}
+.article div{
+text-align: justify;
+    padding: 10px;
+    margin: 10px;
+    font-size: 120%;
+}
+.article div:first-child{
+    font-size: 150%;
+}
+
+/* CSS pour panier*/
+.article_panier .image{
+    width:100px ;
+    height:100px ;
+    display: flex;
+    flex-direction: column;
+
+}
+.article_panier{
+    margin: 2% auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.article_panier > li{
+display :flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.article_panier .bouton_panier{
+    width: 50px;
+    height: 50px;
+    border: 2px solid darkcyan;
+    border-radius: 25px;
+}
+.article_panier .bouton_panier:hover{
+    width: 50px;
+    height: 50px;
+    border: 2px solid red;
+    border-radius: 25px;
+    box-shadow: 3px 3px 2px black;
+}
+
+.article_panier .titre{
+    font-size: 130%;
+    padding: 10%;
+}
+.article_panier .titre+span{
+    font-size: 130%;
+    color: darkcyan;
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
 }
 
