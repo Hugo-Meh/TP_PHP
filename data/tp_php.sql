@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 18 Août 2017 à 06:58
+-- Généré le :  Sam 19 Août 2017 à 16:23
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `tp_php`
 --
+CREATE DATABASE IF NOT EXISTS `tp_php` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `tp_php`;
 
 -- --------------------------------------------------------
 
@@ -160,6 +162,16 @@ CREATE TABLE `panier` (
   `is_sold` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `panier`
+--
+
+INSERT INTO `panier` (`id_livre`, `id_user`, `qte`, `is_sold`) VALUES
+(1, 1, 4, 0),
+(9, 1, 4, 0),
+(10, 1, 3, 0),
+(14, 1, 5, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -212,7 +224,7 @@ ALTER TABLE `livres`
 -- Index pour la table `panier`
 --
 ALTER TABLE `panier`
-  ADD PRIMARY KEY (`id_livre`,`id_user`,`is_sold`),
+  ADD PRIMARY KEY (`id_livre`,`id_user`),
   ADD KEY `id_livre` (`id_livre`),
   ADD KEY `id_user` (`id_user`);
 
