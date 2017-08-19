@@ -18,7 +18,7 @@ $livre = $BD->demande_requete($requete_livre);
 
                 <form method="get" class="article">
 
-                    <div><span class='titre_detail'>Titre: </span><span><?= $un_livre->titre ?></span></div>
+                   <!-- <div><span class='titre_detail'>Titre: </span><span><?= $un_livre->titre ?></span></div>
                     <div><img class='image' src=../<?= $un_livre->url_img ?> alt=<?= $un_livre->alt_img ?>/></div>
                     <div><span class='auteur'>Auteur : </span><span><?= $un_livre->auteur ?></span></div>
                     <div><span class='cat_livre'>Catégorie : </span><span><?= $un_livre->nom_cat ?></span></div>
@@ -26,7 +26,7 @@ $livre = $BD->demande_requete($requete_livre);
                     <div>
                         <span class='prix_livre'>Prix: </span>
                         <span><?= number_format($un_livre->prix, 2, '.', '') ?> CAD</span>
-                    </div>
+                    </div>-->
                     <div>
                         <a class="add" href="ajouter_panier.php?id=<?= $un_livre->id_livre ?>"><img
                                     class="bouton_panier"
