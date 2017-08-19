@@ -3,7 +3,7 @@ require_once 'header_connect.php';
 require_once 'header.php';
 if (isset($_GET['del'])) {
     $panier->supprimer($_GET['del']);
-    header("Location: panier.php");
+//    header("Location: panier.php");
 }
 if (isset($_SESSION['panier'])) {
     $livre_selectionne = implode(',', array_keys($_SESSION['panier']));
@@ -16,8 +16,8 @@ if (isset($_SESSION['panier'])) {
         <span>total des livres : </span><span class="total_prix"><?= $panier->total() ?></span><br>
         <span>prix total : </span><span class="qte_total"><?= $panier->quantite_panier() ?></span>
     </div>
-    <form action="panier.php" method="post">
-        <div id="wrapper_panier">
+    <form action="valider_commande.php" method="post">
+        <div id="wrapper_panier" >
             <?php if (isset($selection_livre)): ?>
 
                 <?php foreach ($selection_livre as $un_livre): ?>
@@ -31,7 +31,7 @@ if (isset($_SESSION['panier'])) {
                         <li>
                             <span class="titre">Quantité</span><span><?= $_SESSION['panier'][$un_livre->id_livre] ?></span>
                         </li>
-                        <li><a href="panier.php?del=<?= $un_livre->id_livre ?>"><img class="bouton_panier"
+                        <li><a class="del" href="del_livre.php?del=<?= $un_livre->id_livre ?>"><img class="del_article"
                                                                                      src="../image/bouton/corbeille.jpg"
                                                                                      alt="bouton d'ajouter dans panier"></a>
                         </li>

@@ -16,19 +16,25 @@ class DataBase
             $this->$password = $password;
             $this->$name_db = $name_db;
         }
-        try{
-            $this->DB= new PDO('mysql:host='.$this->host.';dbname='.$this->name_db.";charset=UTF8",$this->username,
+        try {
+            $this->DB = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->name_db . ";charset=UTF8", $this->username,
                 $this->password);
-        }catch (PDOException $e){
+        } catch (PDOException $e) {
             die('Erreur : ' . $e->getMessage());
         }
     }
 
 
-    public function  demande_requete($sql,$tab=array()){
+    public function demande_requete($sql, $tab = array())
+    {
         $categorie = $this->DB->prepare($sql);
-        $categorie->execute($tab);
+        try {
+            $categorie->execute($tab);
+        } catch (PDOException $e) {
+            die('Erreur : requete inexecutable' . $e->getMessage());
+        }
+
         return $categorie->fetchall(PDO::FETCH_OBJ);
 
-}
+    }
 }
