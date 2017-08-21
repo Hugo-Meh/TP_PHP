@@ -1,5 +1,4 @@
 <?php
-
 require_once  'views/page_top.php';
 $requet = "SELECT * FROM livres";
 $tout_livre = $BD->demande_requete($requet);

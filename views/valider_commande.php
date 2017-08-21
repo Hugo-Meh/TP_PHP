@@ -1,5 +1,6 @@
 <?php
 require_once '../utils/header_connect.php';
+
 if (!empty($_SESSION['panier'])) {
     if (!empty($_SESSION["userlogged"]) && $_SESSION["userlogged"]['is_logged']) {
         foreach ($_SESSION['panier'] as $id_livre => $qte_commande) {
@@ -29,9 +30,8 @@ if (!empty($_SESSION['panier'])) {
                 $resultat = $BD->demande_requete($requete_livre, array("id" => $id_livre));
                 if ($resultat[0]->qte >= $qte_commande) {
                     $req_insert = "INSERT INTO panier VALUES ($id_livre,1,$qte_commande ,false)";
-                    echo "<p class='resultat_commande'> votre commande a été ajouté  pour le livre'" . $resultat[0]->titre . "</p>";
-
                     $resultat_insert = $BD->demande_requete($req_insert);
+                    echo "<p class='resultat_commande'> votre commande a été ajouté  pour le livre'" . $resultat[0]->titre . "</p>";
                     unset($_SESSION['panier'][$id_livre]);
                 } else {
                     echo "<p class='resultat_commande'>nous regrettons nous n'avons pas la quantité suffisante pour le livre "

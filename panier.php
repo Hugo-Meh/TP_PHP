@@ -1,5 +1,5 @@
 <?php
-require_once 'views/header.php';
+require_once 'views/page_top.php';
 
 if (!empty($_GET['del'])) {
     $panier->supprimer($_GET['del']);

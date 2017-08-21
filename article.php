@@ -18,7 +18,7 @@ $livre = $BD->demande_requete($requete_livre);
                 <form method="get" class="article">
 
                     <div><span class='titre_detail'>Titre: </span><span><?= $un_livre->titre ?></span></div>
-                    <div><img class='image' src=<?= $un_livre->url_img ?> alt=<?= $un_livre->alt_img ?>/></div>
+                    <div><a href="livre.php?id=<?= $un_livre->id_livre ?>" title="detail"><img class='image' src=<?= $un_livre->url_img ?> alt=<?= $un_livre->alt_img ?>/></a></div>
                     <div><span class='auteur'>Auteur : </span><span><?= $un_livre->auteur ?></span></div>
                     <div><span class='cat_livre'>Catégorie : </span><span><?= $un_livre->nom_cat ?></span></div>
                     <!-- <div><span class='desc_livre'>Description : </span><span><?= $un_livre->description ?></span></div>-->

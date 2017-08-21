@@ -36,7 +36,7 @@ padding:10px ;
     font-size: 140%;
     font-style: oblique;
     background-color: white;
-    color: #888b89;
+    color: #686b69;
 }
 .div_cat_child{
     border-radius: 2%;
@@ -60,7 +60,6 @@ padding:10px ;
     height: 40px!important;
 }
 #wrapper_articles{
-    border: 1px solid black;
     display: flex;
     width: 100%;
     justify-content: space-around;
@@ -68,8 +67,10 @@ padding:10px ;
     margin:3% auto;
 }
 #wrapper_articles .image{
-    width: 100%;
-    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+
 
 }
 .article {
@@ -79,14 +80,18 @@ padding:10px ;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
     margin: 2%;
 }
 .article div{
 text-align: justify;
     padding: 10px;
-    margin: 10px;
     font-size: 120%;
+}
+.article:hover{
+    box-shadow: 2px 2px 1px black;
+}
+.article div>a:hover{
+    border-bottom: 1px solid darkgrey;
 }
 .article div:first-child{
     font-size: 150%;
@@ -94,11 +99,18 @@ text-align: justify;
 
 /* CSS pour panier*/
 .bouton_submit{
-    margin: 10px 0;
-    width:40%;
+    background-color:#888b89 ;
+    margin: 10px;
+    width:30%;
     height: 20%;
     float: right;
-    font-size: 120%;
+    font-size: 130%;
+}
+.bouton_submit:hover{
+
+    font-style: oblique;
+    background-color: white;
+    color:forestgreen;
 }
 .article_panier .image{
     width:100px ;
@@ -108,18 +120,20 @@ text-align: justify;
 
 }
 .article_panier{
-    margin: 2% auto;
+    padding: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     width: 100%;
-    border: 1px solid black;
     align-items: center;
     justify-content: space-around;
+    border-bottom: 1px dashed gray;
 
 }
 
 .article_panier > li{
-display :flex;
+    margin: 2% 0;
+    display :flex;
     flex-direction: column;
     width: 25%;
     align-items: center;
@@ -128,7 +142,7 @@ display :flex;
 .article_panier .del_article{
     width: 50px;
     height: 50px;
-    border: 2px solid darkcyan;
+    border: 2px solid #276e8b;
     border-radius: 25px;
 }
 .article_panier .del_article:hover{
@@ -223,4 +237,10 @@ display :flex;
 #wrapper_livre .titre_detail,#wrapper_livre .titre_detail+span{
     font-family: 'Roboto Slab', serif;
     font-size: 25px;
+}
+
+
+.reponse{
+display: block;
+    margin: auto;
 }
