@@ -1,189 +1,161 @@
 <?php
+require_once 'views/page_top.php';
+require_once 'data/data_validation.php';
 $en_post = ('POST' === $_SERVER['REQUEST_METHOD']);
 
-$validation=array(
- 'nom'=> array(
-    'val' => '',
-    'err_msg' => '',
-    'is_valid' => false,
-),
-    'prenom'=> array(
-        'val' => '',
-        'err_msg' => '',
-        'is_valid' => false,
-    ),
-    'mail'=> array(
-        'val' => '',
-        'err_msg' => '',
-        'is_valid' => false,
-    ),
-    'mdp'=> array(
-        'val' => '',
-        'err_msg' => '',
-        'is_valid' => false,
-    ),
-    'adr'=> array(
-        'val' => '',
-        'err_msg' => '',
-        'is_valid' => false,
-    ),
-    'cp'=> array(
-        'val' => '',
-        'err_msg' => '',
-        'is_valid' => false,
-    ),
-    'tel'=> array(
-        'val' => '',
-        'err_msg' => '',
-        'is_valid' => false,
-    ),
-);
+if (!empty($_POST) && ! empty($_POST['inscription'])) {
 
-    $l_name=$validation['nom'];
-if(array_key_exists('nom',$_POST))
-{
-    $l_name['val']=trim(filter_input(INPUT_POST,'nom',FILTER_SANITIZE_STRING));
-    $l_name['is_valid']=strlen($l_name['val'])>2;
-    if ( ! $l_name['is_valid']){
-        $l_name['err_msg']='le champ nom est invalid';
+    if (empty($_POST['inscription']['nom']) || !preg_match("/^[a-zA-Z_]{3,}$/", $_POST['inscription']['nom'])) {
+        $validation["nom"]["err_msg"] = "votre nom est invalid";
+        $validation["nom"]["is_valid"] = true;
+
+    } else {
+        $validation["nom"]["val"] = $_POST['inscription']['nom'];
     }
+    if (empty($_POST['inscription']['prenom']) || !preg_match("/^[a-zA-Z_]{3,}$/", $_POST['inscription']['prenom'])) {
+        $validation["prenom"]["err_msg"] = "votre prenom est invalid";
+        $validation["prenom"]["is_valid"] = true;
+
+    } else {
+        $validation["prenom"]["val"] = $_POST['inscription']['prenom'];
+    }
+
+    if (empty($_POST['inscription']['mail']) || !filter_var($_POST['inscription']['mail'], FILTER_VALIDATE_EMAIL)) {
+        $validation["mail"]["err_msg"] = "votre email est invalid";
+        $validation["mail"]["is_valid"] = true;
+
+    } else {
+        $requet = 'SELECT mail FROM user WHERE mail=:email';
+        $resultat = $BD->demande_requete($requet, array('email' => $_POST['inscription']['mail']));
+        if (!empty($resultat)) {
+            $validation["mail"]["err_msg"] = "votre email est dejà utilisé";
+            $validation["mail"]["is_valid"] = true;
+
+        } else {
+            $validation["mail"]["val"] = $_POST['inscription']['mail'];
+        }
+    }
+    if (empty($_POST['inscription']['mdp']) || $_POST['inscription']['mdp'] != $_POST['inscription']['mdpconfirm']
+        || !preg_match("/^[a-zA-Z0-9]{6,}$/", $_POST['inscription']['mdp'])) {
+        $validation["mdp"]["err_msg"] = "votre password est invalid(alphanumerique)";
+        $validation["mdp"]["is_valid"] = true;
+
+    }
+    if (strlen($_POST['inscription']['adr'])==0) {
+        $validation["adr"]["err_msg"] = "votre champ adresse  est vide";
+        $validation["adr"]["is_valid"] = true;
+
+    } else {
+        $validation["adr"]["val"] = $_POST['inscription']['adr'];
+    }
+    if (empty($_POST['inscription']['cp'])
+        || !preg_match("/^[A-Za-z][0-9][A-Za-z][0-9][A-Za-z][0-9]$/", $_POST['inscription']['cp'])) {
+        $validation["cp"]["err_msg"] = "votre champ est invalid exemple de code postal 1H11B1";
+        $validation["cp"]["is_valid"] = true;
+
+    } else $validation["cp"]["val"] = $_POST['inscription']['cp'];
+
+    if (!preg_match("/^[0-9]{10}$/", $_POST['inscription']['tel'])) {
+        $validation["tel"]["err_msg"] = "votre format du tel est invalid";
+        $validation["tel"]["is_valid"] = true;
+
+    } else $validation["tel"]["val"] = $_POST['inscription']['tel'];
+
+
 }
-$f_name=$validation['prenom'];
+$test_update =true;
+foreach ($validation as $value) {
+    if ($value["is_valid"] == true) {
+        $test_update=false;
+        break;
 
-if(array_key_exists('prenom',$_POST))
-{
-    $f_name['val']=trim(filter_input(INPUT_POST,'prenom',FILTER_SANITIZE_STRING));
-    $f_name['is_valid']=strlen($f_name['val'])>2;
-    if ( ! $f_name['is_valid']){
-        $f_name['err_msg']='le champ prenom est invalid';
     }
+
 }
-$email=$validation['mail'];
-if(array_key_exists('mail',$_POST))
-{
-    $email['val']=trim(filter_var($_POST['mail'],FILTER_VALIDATE_EMAIL));
-    $email['is_valid']=strlen($email['val'])!=false;
-    if ( ! $email['is_valid']){
-        $email['err_msg']='email est invalid';
+if ($en_post &&  $test_update &&!empty($_POST)) {
+    require_once 'utils/traitement.php';
+    if(!empty($_POST['inscription']))
+    {
+    unset($_POST['inscription']);
     }
-}
-
-$mdp=$validation['mdp'];
-if(array_key_exists('mdp',$_POST))
-{
-    $mdp['val']=trim(filter_input(INPUT_POST,'mdp',FILTER_SANITIZE_STRING));
-    $mdp['is_valid']=(1 === preg_match('^[\w$@%*+\-_!]{4,15}$',$mdp['val']));
-    if ( ! $mdp['is_valid']){
-        $mdp['err_msg']='le champ mot de passe est invalid: il doit contenir au moins un chiffre une lettre majiscule 
-        une lettre miniscule et des caractere suivant  $ @ % * + - _ !';
-    }
-}
-
-
-$adr=$validation['adr'];
-
-if(array_key_exists('adr',$_POST))
-{
-    $adr['val']=trim(filter_input(INPUT_POST,'adr',FILTER_SANITIZE_STRING));
-    $adr['is_valid']=strlen($adr['val'])>0;
-    if ( ! $adr['is_valid']){
-        $adr['err_msg']='le champ adresse est invalid';
-    }
-}
-
-
-$cp=$validation['cp'];
-if(array_key_exists('cp',$_POST))
-{
-    $cp['val']=trim(filter_input(INPUT_POST,'cp',FILTER_SANITIZE_STRING));
-    $cp['is_valid']=(1 === preg_match('^[A-Z]\d[A-Z] \d[A-Z]\d$',$cp['val']));
-    if ( ! $cp['is_valid']){
-        $cp['err_msg']='le champ code postale est invalid';
-    }
-}
-
-$tel=$validation['tel'];
-if(array_key_exists('tel',$_POST))
-{
-    $tel['val']=trim(filter_input(INPUT_POST,'tel',FILTER_SANITIZE_STRING));
-    $tel['is_valid']=(1 === preg_match('^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$',$tel['val']));
-    if ( ! $tel['is_valid']){
-        $tel['err_msg']='le champ telephone est invalid';
-    }
+    exit();
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
+    <meta charset="UTF-8">
+    <title></title>
 </head>
 <body>
 <?php
 ?>
-<form action="traitement.php" method="post">
-    <fieldset>
+<form action="" method="post">
     <legend>INSCRIPTION</legend>
-        <ul>
-            <li><label for="nom">Nom :</label><input type="text" placeholder="votre nom" id="nom" name="nom" required autofocus/>
-                <?php if ($en_post && !$l_name['is_valid'])
-                {
-                    echo'<p class="champ_invalide">'.$l_name['err_msg'].'</p>';
-                }
+    <ul>
+        <li><label for="nom">Nom :</label><input type="text" placeholder="votre nom" id="nom" name="inscription[nom]"
+                                                 value='<?= $validation["nom"]["val"] ?>' autofocus/>
+            <?php if ($en_post && $validation["nom"]["is_valid"]) {
+                echo '<p class="champ_invalide">' . $validation["nom"]["err_msg"] . '</p>';
+            }
 
-                ?>
-            </li>
-            <li><label for="penom">Prenom :</label><input type="text" placeholder="votre prenom" id="prenom" name="prenom" required/>
-                <?php if ($en_post && !$f_name['is_valid'])
-                {
-                    echo'<p class="champ_invalide">'.$f_name['err_msg'].'</p>';
-                }
+            ?>
+        </li>
+        <li><label for="penom">Prenom :</label><input type="text" placeholder="votre prenom" id="prenom" name="inscription[prenom]"
+                                                      value='<?= $validation["prenom"]["val"] ?>'/>
+            <?php if ($en_post && $validation["prenom"]["is_valid"]) {
+                echo '<p class="champ_invalide">' . $validation["prenom"]["err_msg"] . '</p>';
+            }
 
-                ?>
-            </li>
-            <li><label for="mail">mail :</label><input type="email" placeholder="exemple@domaine.ca" id="mail" name="mail" required/>
-                <?php if ($en_post && !$email['is_valid'])
-                {
-                    echo'<p class="champ_invalide">'.$email['err_msg'].'</p>';
-                }
+            ?>
+        </li>
+        <li><label for="mail">mail :</label><input type="email" placeholder="exemple@domaine.ca" id="mail" name="inscription[mail]"
+                                                   value='<?= $validation["mail"]["val"] ?>'/>
+            <?php if ($en_post && $validation["mail"]["is_valid"]) {
+                echo '<p class="champ_invalide">' . $validation["mail"]["err_msg"] . '</p>';
+            }
 
-                ?>
+            ?>
 
-            </li>
-            <li><label for="mdp">mot de passe :</label><input type="password" id="mdp" name="mdp" min=8 required/>
-                <?php if ($en_post && !$mdp['is_valid'])
-                {
-                    echo'<p class="champ_invalide">'.$mdp['err_msg'].'</p>';
-                }
+        </li>
+        <li><label for="mdp">mot de passe :</label><input type="password" id="mdp" name="inscription[mdp]" min=8/>
+            <?php if ($en_post && $validation["mdp"]["is_valid"]) {
+                echo '<p class="champ_invalide">' . $validation["mdp"]["err_msg"] . '</p>';
+            }
 
-                ?>
-            </li>
-            <li><label for="adr">adresse :</label><input type="text" required id="adr" name="adr"/>
-                <?php if ($en_post && !$adr['is_valid'])
-                {
-                    echo'<p class="champ_invalide">'.$adr['err_msg'].'</p>';
-                }
-                ?>
-            </li>
-            <li><label for="cp">code postale :</label><input type="text" required id="cp" name="cp"/>
-                <?php if ($en_post && !$cp['is_valid'])
-                {
-                    echo'<p class="champ_invalide">'.$cp['err_msg'].'</p>';
-                }
-                ?>
+            ?>
+        </li>
+        <li><label for="mdp">mot de passe :</label><input type="password" id="mdp" name="inscription[mdpconfirm]" min=8/>
 
-            </li>
-            <li><label for="tel">téléphone :</label><input type="tel" id="tel" name="tel"/>
-                <?php if ($en_post && !$tel['is_valid'])
-                {
-                    echo'<p class="champ_invalide">'.$tel['err_msg'].'</p>';
-                }
-                ?>
+        </li>
+        <li><label for="adr">adresse :</label><input type="text" id="adr" name="inscription[adr]"
+                                                     value='<?= $validation["adr"]["val"] ?>'/>
+            <?php if ($en_post && $validation["adr"]["is_valid"]) {
+                echo '<p class="champ_invalide">' . $validation["adr"]["err_msg"] . '</p>';
+            }
+            ?>
+        </li>
+        <li><label for="cp">code postale :</label><input type="text" value='<?= $validation["cp"]["val"] ?>' id="cp"
+                                                         name="inscription[cp]"/>
+            <?php if ($en_post && $validation["cp"]["is_valid"]) {
+                echo '<p class="champ_invalide">' . $validation["cp"]["err_msg"] . '</p>';
+            }
+            ?>
 
-            </li>
-            <li><input type="submit" value="valider inscription"/></li>
-        </ul>
-    </fieldset>
+        </li>
+        <li><label for="tel">téléphone :</label><input type="tel" value='<?= $validation["tel"]["val"] ?>' id="tel"
+                                                       name="inscription[tel]"/>
+            <?php if ($en_post && $validation["tel"]["is_valid"]) {
+                echo '<p class="champ_invalide">' . $validation["tel"]["err_msg"] . '</p>';
+            }
+            ?>
+
+        </li>
+        <li><input type="submit" value="valider inscription"/></li>
+    </ul>
 </form>
 </body>
 </html>
+
+
+

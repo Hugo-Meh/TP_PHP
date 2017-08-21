@@ -1,5 +1,5 @@
 <?php
-require_once 'header_connect.php';
+require_once '../utils/header_connect.php';
 
 $json=array("erreur"=>true);
 

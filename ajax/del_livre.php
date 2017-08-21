@@ -1,5 +1,5 @@
 <?php
-require_once 'header_connect.php';
+require_once '../utils/header_connect.php';
 //var_dump($_GET);
 //var_dump($_SESSION);
 $json = array("erreur" => true);

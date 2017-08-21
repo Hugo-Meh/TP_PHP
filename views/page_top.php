@@ -1,5 +1,5 @@
 <?php
-require_once 'header_connect.php';
+require_once dirname(__DIR__).'/utils/header_connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,14 +7,17 @@ require_once 'header_connect.php';
     <meta http-equiv="Content-Type" content="text/html" charset=utf-8"/>
     <meta charset="UTF-8">
     <title><?= $title ?></title>
-    <link rel="stylesheet" href="http://localhost/tp_php/CSS/main.css"/>
-    <script rel="script" src="../js/jquery-3.2.1.js"></script>
-    <script rel="script" src="../js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="http://localhost/TP/CSS/main.css"/>
+    <script rel="script" src="js/jquery-3.2.1.js"></script>
+    <script rel="script" src="js/main.js"></script>
 </head>
 <body>
 
 <?php
 require_once('header.php');
 ?>
-<div id="wrapper">
+<main>
+
 

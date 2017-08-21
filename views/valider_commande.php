@@ -1,7 +1,5 @@
 <?php
-
-require_once 'header_connect.php';
-var_dump($_SESSION);
+require_once '../utils/header_connect.php';
 if (!empty($_SESSION['panier'])) {
     foreach ($_SESSION['panier'] as $id_livre => $qte_commande) {
         $requete_commande = 'SELECT DISTINCT U.id_user,P.id_livre,L.prix,L.qte,L.titre FROM panier P 
@@ -11,22 +9,17 @@ if (!empty($_SESSION['panier'])) {
         $resultat = $BD->demande_requete($requete_commande, array("email" => "mohamednefzi.1985@gmail.com", "id" => $id_livre));
 
         if (!empty($resultat)) {
-            echo 'update :' . $id_livre;
             $user = $resultat[0]->id_user;
-            $tab = array(":new_qte" => $qte_commande,
-                ":bool" => false,
-                ":id_u" => $user,
-                ":id_L" => $id_livre);
-
+            $qte_commande=$_SESSION['panier'][$id_livre];
             if ($resultat[0]->qte >= $qte_commande) {
-                echo 'update ok <br>:';
                 $req_update = "UPDATE panier SET qte = qte +$qte_commande ,is_sold=false WHERE id_user=$user AND id_livre=$id_livre";
                 $resultat_update = $BD->demande_requete($req_update);
                 unset($_SESSION['panier'][$id_livre]);
+                echo "<p class='resultat_commande'> votre qantité de commande a été mis a jour  pour le livre'". $resultat[0]->titre ."</p>";
 
             } else {
-                printf("nous regrettons nous n'avons pas la quantité suffisante pour le livre "
-                    . $resultat[0]->titre . ". Vous puvez commander jusqu'a :" . $resultat[0]->qte);
+                echo "<p class='resultat_commande'>nous regrettons nous n'avons pas la quantité suffisante pour le livre "
+                    . $resultat[0]->titre . ". Vous pouvez commander jusqu'a :" . $resultat[0]->qte."</p>";
             }
 
         } else {
@@ -35,12 +28,13 @@ if (!empty($_SESSION['panier'])) {
             $resultat = $BD->demande_requete($requete_livre, array("id" => $id_livre));
             if ($resultat[0]->qte >= $qte_commande) {
                 $req_insert = "INSERT INTO panier VALUES ($id_livre,1,$qte_commande ,false)";
+                echo "<p class='resultat_commande'> votre commande a été ajouté  pour le livre'". $resultat[0]->titre ."</p>";
 
                 $resultat_insert = $BD->demande_requete($req_insert);
                 unset($_SESSION['panier'][$id_livre]);
             } else {
-                echo "nous regrettons nous n'avons pas la quantité suffisante pour le livre "
-                    . $resultat[0]->titre . ". Vous puvez commander jusqu'a :" . $resultat[0]->qte;
+                echo "<p class='resultat_commande'>nous regrettons nous n'avons pas la quantité suffisante pour le livre "
+                    . $resultat[0]->titre . ". Vous pouvez commander jusqu'a :" . $resultat[0]->qte."</p>";
             }
         }
     }

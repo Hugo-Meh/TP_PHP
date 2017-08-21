@@ -8,7 +8,7 @@ $categorie = $BD->demande_requete("SELECT * FROM categorie");
 
 <div id="wrapper">
     <div id="wrapper_cat">
-        <form method="POST" action="views/article.php">
+        <form method="POST" action="article.php">
             <div id="div_cat">
 
                 <?php foreach ($categorie as $donnee): ?>

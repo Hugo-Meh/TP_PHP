@@ -7,10 +7,9 @@
  */
 ?>
 <div id="container_insc_conn">
-    <form method="post" action="traitement.php" id="form_connexion">
+    <form method="post" action="../utils/traitement.php" id="form_connexion">
         <input type="text" name="username" required="required" placeholder="username" autofocus />
         <input type="password" name="password" required="required" placeholder="username"/>
         <input type="submit" value="connexion"/>
     </form>
-    <a href="inscription.php">inscription</a>
 </div>

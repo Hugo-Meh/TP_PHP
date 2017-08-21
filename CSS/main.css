@@ -1,10 +1,6 @@
 li{
     list-style: none;
 }
-.bouton_panier{
-    width: 40px;
-    height: 40px;
-}
 #wrapper{
 
     width: 80%;
@@ -44,6 +40,10 @@ li{
 
 /*css pour page article*/
 
+.bouton_panier{
+    width: 40px!important;
+    height: 40px!important;
+}
 #wrapper_articles{
     border: 1px solid black;
     display: flex;
@@ -78,6 +78,13 @@ text-align: justify;
 }
 
 /* CSS pour panier*/
+.bouton_submit{
+    margin: 10px 0;
+    width:40%;
+    height: 20%;
+    float: right;
+    font-size: 120%;
+}
 .article_panier .image{
     width:100px ;
     height:100px ;
@@ -128,3 +135,77 @@ display :flex;
     text-align: center;
 }
 
+.valider_qte img{
+    width: 30px;
+}
+
+
+
+/*css accueil*/
+#wrapper_accueil{
+    position: relative;
+    width: 70%;
+    height: 1000px;
+    background-color: deepskyblue;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#fleche_gauche{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    float: left;
+    left: 0;
+    top: 30%;
+}
+#fleche_droite{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    float: right;
+    right: 10.5%;
+    top: 30%;
+}
+.slider_content{
+    width: 10000px;
+    display: flex;
+
+}
+.class_slider{
+    width: 100%;
+    margin: 0.6%;
+}
+.class_slider img{
+    display: block;
+    width: 100%;
+}
+.info_livre h2,.info_livre h3{
+    display: block;
+    text-align: center;
+
+}
+
+#wrapper_livre{
+    display: flex;
+    margin: 10px auto;
+    text-align: center;
+}
+#wrapper_livre>div+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.desc_livre,.desc_livre+span{
+    font-family: 'Inconsolata', monospace;
+    font-size: 15px;
+}
+#wrapper_livre>*{
+    padding: 10px;
+
+
+}
+#wrapper_livre .titre_detail,#wrapper_livre .titre_detail+span{
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+}

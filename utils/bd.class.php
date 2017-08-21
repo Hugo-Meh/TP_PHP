@@ -6,7 +6,7 @@ class DataBase
     private $username = "root";
     private $password = "";
     private $name_db = "tp_php";
-    public $DB;
+    private $DB;
 
     public function __construct($host = null, $username = null, $password = null, $name_db = null)
     {
@@ -29,9 +29,11 @@ class DataBase
     {
         $categorie = $this->DB->prepare($sql);
         try {
-            $categorie->execute($tab);
+            $categorie->execute($tab)
+            or die(print_r($categorie->errorInfo(), TRUE));
         } catch (PDOException $e) {
             die('Erreur : requete inexecutable' . $e->getMessage());
+            exit();
         }
 
         return $categorie->fetchall(PDO::FETCH_OBJ);
