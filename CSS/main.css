@@ -2,15 +2,17 @@ li{
     list-style: none;
 }
 #wrapper{
-
+    background-color: ghostwhite;
+    box-shadow: 2px 2px 1px black;
     width: 80%;
     margin: 0 auto;
+    border-radius: 2%;
 }
 /*css pour page catalogue*/
-#wrapper_cat form {
-    border: 1px solid black;
+#wrapper_cat{
+padding:10px ;
 }
-#wrapper_cat #div_cat{
+#wrapper_cat #div_cat {
     display: flex;
     width: 80%;
     justify-content: center;
@@ -18,13 +20,26 @@ li{
     margin: 3% auto;
 
 }
+
+
 #div_cat + input{
-    width:40%;
+    width:30%;
+    font-family: Arial sans-serif ;
     display: block;
     margin: 2% auto;
     font-size: 120%;
+    background-color: #888b89;
+    color: white;
+    border-radius: 3%;
+}
+#div_cat + input:hover{
+    font-size: 140%;
+    font-style: oblique;
+    background-color: white;
+    color: #888b89;
 }
 .div_cat_child{
+    border-radius: 2%;
     width: 30%;
     padding: 2% 0;
     font-size: 120%;
@@ -32,10 +47,10 @@ li{
     justify-content: flex-start;
     align-items: center;
 }
+
 .div_cat_child input {
     display: inline-block;
     margin-right: 10%;
-
 }
 
 /*css pour page article*/

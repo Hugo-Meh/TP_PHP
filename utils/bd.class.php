@@ -2,6 +2,12 @@
 
 class DataBase
 {
+    /* private $host = "localhost";
+     private $username = "dbphp";
+     private $password = "4e5u9ytuq";
+     private $name_db = "mnefzi_dbphp";
+     private $DB;
+ */
     private $host = "localhost";
     private $username = "root";
     private $password = "";

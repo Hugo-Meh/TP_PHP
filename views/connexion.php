@@ -18,6 +18,6 @@ if (!empty($_POST['connexion'])) {
     <form method="post" action="" id="form_connexion">
         <input type="text" name="connexion[mail]" required placeholder="username" autofocus/>
         <input type="password" name="connexion[mdp]" required placeholder="username"/>
-        <input type="submit" value="connexion"/>
+        <input type="submit" value="connexion" />
     </form>
 </div>

@@ -9,7 +9,7 @@ require_once dirname(__DIR__).'/utils/header_connect.php';
     <title><?= $title ?></title>
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-    <link rel="stylesheet" href="http://localhost/TP/CSS/main.css"/>
+    <link rel="stylesheet" href="CSS/main.css"/>
     <script rel="script" src="js/jquery-3.2.1.js"></script>
     <script rel="script" src="js/main.js"></script>
 </head>
