@@ -1,0 +1,30 @@
+NEXT COMMIT
+-delete commit page not sure repot
+-delete /images
+-delete catalogue + rename article to catalogue
+
+
+corrigé :
+page views/articles.php contient l'affichages des articles
+pages articles.php devient page catalogue
+le formulaire des categorie devient un form POST avec bouton submit
+condition de validation pour eviter les variable indefini au lancement de la page
+changement des nom des liens dans menu.php
+
+Next COmmit
+terminer les condition de validation coté serveur dans la page d'inscription
+verification des donnees avant de les inserer dans BD
+
+NEXT commit
+corrigé les condition de validation page inscription et verification de l'existance de l'email dans la table utilisateur
+
+NEXT commit
+ajout dans le panier tout en verifiant la disponiblité dans la base de donnée
+
+ reste a faire  la partie connexion validation avec base donnée
+ enregistrement de la validation dans la session is_loged et user name
+ les pages footer et header le css pour certaine page
+ un slider en java script et appel des image de la base en php avec du css
+ validation commande manque un location:"index.php"
+ manque css pour les message de reponse renvoyé apres traitement avec la base de donnee
+ erreur au niveau de chargement de la page panier si elle est vide
