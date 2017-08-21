@@ -244,3 +244,47 @@ text-align: justify;
 display: block;
     margin: auto;
 }
+
+header {
+    display: flex;
+    justify-content: space-around;
+}
+header > div {
+    display: flex;
+    margin: 15px;
+}
+#menu{
+    width: 50%;
+    order:1;
+}
+#panier{
+    order: 3;
+}
+#connexion{
+    order: 2;
+}
+header > div > ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+}
+header > div > ul> li {
+    width: 100%;
+}
+header > div > ul> li>a  {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+}
+header img { 
+    width: 80px;
+    height: 80px;
+}
