@@ -18,7 +18,7 @@
         width: 20%;
         position: relative;
     }
-    
+
 
     /********************************************/
     /*FONCTIONNEMENT DU SLIDER*/
