@@ -21,8 +21,10 @@ if (array_key_exists('deconnexion',$_POST) && !empty($_POST['deconnexion'])){
     <?php if (!(array_key_exists('userlogged',$_SESSION))){
         echo '
         <form method="post" action="" id="form_connexion">
-        <input type="text" name="connexion[mail]" required placeholder="username" autofocus/>
-        <input type="password" name="connexion[mdp]" required placeholder="password"/>
+        <label for="username">identifiant</label>
+        <input type="text" name="connexion[mail]" id="username" required placeholder="username" autofocus/>
+        <label for="password">mot de passe</label>
+        <input type="password" name="connexion[mdp]" id="password" required placeholder="password"/>
         <input type="submit" value="connexion" />
     </form>';
     }

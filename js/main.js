@@ -6,7 +6,10 @@ $(function () {
     console.log("chargement effectué");
     var valeur_modif;
     var valeur;
-
+    $('.neutre').on('click',function(){
+        $('.neutre').removeClass('active');
+        $(this).addClass('active');
+    });
     $('.add').on('click', function (e) {
         e.preventDefault();
         console.log($(this).attr('href'));

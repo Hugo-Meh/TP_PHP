@@ -32,12 +32,12 @@ padding:10px ;
     color: white;
     border-radius: 3%;
 }
-#div_cat + input:hover{
+/*#div_cat + input:hover{
     font-size: 140%;
     font-style: oblique;
     background-color: white;
     color: #686b69;
-}
+}*/
 .div_cat_child{
     border-radius: 2%;
     width: 30%;
@@ -64,7 +64,7 @@ padding:10px ;
     width: 100%;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin:3% auto;
+    margin:0 auto;
 }
 #wrapper_articles .image{
     display: block;
@@ -87,9 +87,9 @@ text-align: justify;
     padding: 10px;
     font-size: 120%;
 }
-.article:hover{
+/*.article:hover{
     box-shadow: 2px 2px 1px black;
-}
+}*/
 .article div>a:hover{
     border-bottom: 1px solid darkgrey;
 }
@@ -177,6 +177,8 @@ text-align: justify;
     height: 1000px;
     background-color: deepskyblue;
     margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
     overflow: hidden;
 }
 
@@ -232,7 +234,6 @@ text-align: justify;
 #wrapper_livre>*{
     padding: 10px;
 
-
 }
 #wrapper_livre .titre_detail,#wrapper_livre .titre_detail+span{
     font-family: 'Roboto Slab', serif;
@@ -248,6 +249,9 @@ display: block;
 header {
     display: flex;
     justify-content: space-around;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    margin-bottom: 2%;
 }
 header > div {
     display: flex;
@@ -263,14 +267,36 @@ header > div {
 #connexion{
     order: 2;
 }
+
+#container_insc_conn{
+    display: flex;
+    align-items: center;
+}
+#form_connexion >*{
+    display: block;
+    margin: 2px;
+}
 header > div > ul {
     display: flex;
     justify-content: space-around;
     width: 100%;
     margin: 0;
+    padding: 0;
+}
+header > div > ul> li:hover {
+    transition:1s all;
+    box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.4);
+    border-radius: 5px;
+
 }
 header > div > ul> li {
     width: 100%;
+    background-color: cornflowerblue;
+}
+header > div > ul> li:hover {
+    width: 100%;
+    border: solid black 2px;
+    margin: 1px;
 }
 header > div > ul> li>a  {
     display:flex;
@@ -287,4 +313,63 @@ header > div > ul> li>a  {
 header img { 
     width: 80px;
     height: 80px;
+}
+body {
+    margin: 0;
+  /*  background: url('../image/background/bookshelf.jpg') repeat;*/
+}
+footer {
+    margin-top: 2%;
+    border-radius: 15px;
+    background-color: cornflowerblue;
+    height: 150px;
+}
+footer p{
+    line-height: 150px;
+    text-align: center;
+    font-size: larger;
+}
+main > div {
+    background-color: lightgrey;
+    width: 80%;
+    margin: 0 auto;
+}
+#wrapper_inscription>form>ul{
+    padding-left: 100px;
+
+}
+#wrapper_inscription>form>ul> li {
+    display: inline-block;
+    width: 49%;
+}
+#wrapper_inscription>form>ul> li>label {
+    display: inline-block;
+    width: 50%;
+    text-align: center;
+}
+#wrapper_inscription>form>ul> li>input:not([type=submit]) {
+    border: none;
+    display: inline-block;
+    width: 75%;
+    background-color: lightgrey;
+    border-bottom: solid black 1px ;
+
+}
+#wrapper_inscription>form>ul> #submit{
+    width: 100%;
+ }
+
+#wrapper_inscription>form>ul> li>input[type=submit]{
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 30%;
+    height: 50px;
+}
+#wrapper_inscription>form>ul> li>*{
+    margin: 5px;
+}
+
+.active{
+    color: red;
 }

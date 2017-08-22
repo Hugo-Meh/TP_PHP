@@ -5,7 +5,6 @@ if (array_key_exists("id", $_GET)) {
     $un_livre = $BD->demande_requete($requet);
 
 } ?>
-<div id="wrapper">
     <div id="wrapper_livre">
         <div><img class='image' src=<?= $un_livre[0]->url_img ?> alt=<?= $un_livre[0]->alt_img ?>/></div>
         <div>
@@ -26,4 +25,6 @@ if (array_key_exists("id", $_GET)) {
             </div>
         </div>
     </div>
-</div>
+<?php
+require_once ('views/page_bottom.php')
+?>

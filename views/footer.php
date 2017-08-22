@@ -2,5 +2,5 @@
 
 ?>
 <footer>
-    <p>le footer dans <?= $title?></p>
+    <p>Powered by Nefzi mohamed & Mehdaoui Hugo</p>
 </footer>

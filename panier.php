@@ -48,3 +48,6 @@ if (!empty($_SESSION['panier'])) {
     </form>
 </div>
 
+<?php
+require_once ('views/page_bottom.php')
+?>
